@@ -1,0 +1,231 @@
+using System;
+
+using System.ComponentModel.Design;
+
+ 
+
+namespace HelloWorld
+
+{
+
+   class Program
+
+   {
+
+       static void Main(string[] args)
+
+       {
+
+             int validador = 0;
+
+           string numero;
+
+          
+
+ 
+
+ 
+
+           while (validador == 0)
+
+           {
+
+               Console.ForegroundColor = ConsoleColor.Green;
+
+              Console.WriteLine("\nPressione 0 para sair\n\nInforme a Operação \n(+ - * / ! %)");
+
+               numero = Console.ReadLine();
+
+               float fn, sn, ln;
+
+ 
+
+              
+
+ 
+
+               switch (numero)
+
+               {
+
+                   case "0":
+
+                       validador = 1;
+
+                       break;
+
+                   case "+": //operação de adição
+
+                      Console.WriteLine("\n DIGITE O PRIMEIRO NÚMERO");
+
+                       fn = float.Parse(Console.ReadLine());
+
+                      Console.WriteLine("\n DIGITE O SEGUNDO NÚMERO");
+
+                       sn = float.Parse(Console.ReadLine());
+
+                       ln = fn + sn;
+
+                      Console.WriteLine("\n {0}+{1}={2}",fn,sn,ln);
+
+                       break;
+
+//____________________________________________________________________________________________________________________
+
+                   case "-": //operação de subtração
+
+                      Console.WriteLine("\n DIGITE O PRIMEIRO NÚMERO");
+
+                       fn = float.Parse(Console.ReadLine());
+
+                      Console.WriteLine("\n DIGITE O SEGUNDO NÚMERO");
+
+                       sn = float.Parse(Console.ReadLine());
+
+                       ln = fn - sn;
+
+                      Console.WriteLine("\n {0}-{1}={2}", fn, sn, ln);
+
+                       break;
+
+//____________________________________________________________________________________________________________________
+
+                   case "/": //operação de multiblicação
+
+                      Console.WriteLine("\n DIGITE O PRIMEIRO NÚMERO");
+
+                       fn = float.Parse(Console.ReadLine());
+
+                      Console.WriteLine("\n DIGITE O SEGUNDO NÚMERO");
+
+                       sn = float.Parse(Console.ReadLine());
+
+                       ln = fn / sn;
+
+                      Console.WriteLine("\n {0}/{1}={2}", fn, sn, ln);
+
+                       break;
+
+//____________________________________________________________________________________________________________________
+
+                   case "*":
+
+                      Console.WriteLine("\n DIGITE O PRIMEIRO NÚMERO");
+
+                       fn = float.Parse(Console.ReadLine());
+
+                      Console.WriteLine("\n DIGITE O SEGUNDO NÚMERO");
+
+                       sn = float.Parse(Console.ReadLine());
+
+                       ln = fn * sn;
+
+                      Console.WriteLine("\n {0}*{1}={2}", fn, sn, ln);
+
+                       break;
+
+//____________________________________________________________________________________________________________________
+
+                   case "!":
+
+                       int num, fatorial, cont;
+
+                       num = 0;
+
+                       fatorial = 1;
+
+ 
+
+                      Console.WriteLine("\n DIGITE O NÚMERO");
+
+                       num = int.Parse(Console.ReadLine());
+
+ 
+
+                       if (num < 0)
+
+                      
+
+                       {
+
+                          Console.WriteLine("\n INVÁLIDO");
+
+                       }
+
+                        else if ((num == 0) || (num == 1))
+
+                       {
+
+                          Console.WriteLine("\n fatorial de {0} é 1.", num );
+
+                       }
+
+                        else 
+
+                       {
+
+                           for(cont = num; cont >= 1; cont -- )
+
+                           {
+
+                               fatorial *= cont; 
+
+                           }
+
+                          Console.WriteLine("\n fatorial de {0} é {1}", num, fatorial);
+
+                       }
+
+                       break;
+
+//____________________________________________________________________________________________________________________
+
+                   case "%":
+
+                       int FirstNumber, SecondNumber;
+
+                      Console.WriteLine("\n Digite o Número:");
+
+                       FirstNumber = int.Parse(Console.ReadLine());
+
+                       if (FirstNumber % 2 == 0)
+
+                       {
+
+                          Console.WriteLine("\n O numero é par");
+
+                       }
+
+                       else if (FirstNumber % 2 != 0)
+
+                       {
+
+                          Console.WriteLine("\n O numero é impar");
+
+                       }
+
+                      
+
+                       break;
+
+//____________________________________________________________________________________________________________________
+
+                   default:
+
+                      Console.WriteLine("\n \n \n opção inválida, escolha novamente");
+
+                       break;
+
+               }
+
+           }
+
+ 
+
+       }
+
+   }
+
+ 
+
+}
